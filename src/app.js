@@ -3,14 +3,17 @@ const express = require("express");
 const app = express();
 const port  = process.env.PORT || 3000;
 const path = require("path");
+var hbs = require('express-handlebars');
+
 require("./db/conn");
 
 const static_path_of_index = path.join(__dirname, "../public");
 
 app.use( express.static(static_path_of_index));
+app.set("view engine",hbs);
 
 app.get("/",(req,res)=>{
-    res.send("home page")
+    res.render("index.hbs");
 })
 
 app.listen(port ,()=>{
