@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const emplScehema = new new mongoose.Schema({
+const emplScehema = new mongoose.Schema({
     firstname:{
         type:String,
         required:true
@@ -52,6 +52,5 @@ const emplScehema = new new mongoose.Schema({
 })
 
 //now create collection
-
 const Register = new mongoose.model("mernthapa-col", emplScehema);
 module.exports = Register;
