@@ -1,4 +1,1 @@
-# RegForm
-mern thapa registration form
-59 min done
-almost done
+It sends data to mongo db only
